@@ -4,7 +4,7 @@
   Foundation.libs.clearing = {
     name : 'clearing',
 
-    version : '{{VERSION}}',
+    version : '5.5.2',
 
     settings : {
       templates : {
@@ -453,9 +453,9 @@
       var caption = $image.attr('data-caption');
 
       if (caption) {
-      	var containerPlain = container.get(0);
-      	containerPlain.innerHTML = caption;
-        container.show();
+        container
+          .html(caption)
+          .show();
       } else {
         container
           .text('')

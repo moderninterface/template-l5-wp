@@ -4,7 +4,7 @@
   Foundation.libs.slider = {
     name : 'slider',
 
-    version : '{{VERSION}}',
+    version : '5.5.2',
 
     settings : {
       start : 0,
@@ -72,9 +72,10 @@
 
         if (settings.display_selector != '') {
           $(settings.display_selector).each(function(){
-            if ($(this).attr('value')) {
+            if (this.hasOwnProperty('value')) {
               $(this).change(function(){
-                self.set_value($(this).val());
+                // is there a better way to do this?
+                slider.foundation("slider", "set_value", $(this).val());
               });
             }
           });

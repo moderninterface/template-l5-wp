@@ -4,7 +4,7 @@
   Foundation.libs.accordion = {
     name : 'accordion',
 
-    version : '{{VERSION}}',
+    version : '5.5.2',
 
     settings : {
       content_class : 'content',
@@ -74,7 +74,7 @@
           settings = accordion.data(self.attr_name(true) + '-init') || self.settings;
 
       aunts.children('a').attr('aria-expanded','false');
-      aunts.has('.' + settings.content_class + '.' + settings.active_class).addClass(settings.active_class).children('a').attr('aria-expanded','true');
+      aunts.has('.' + settings.content_class + '.' + settings.active_class).children('a').attr('aria-expanded','true');
 
       if (settings.multi_expand) {
         $instance.attr('aria-multiselectable','true');

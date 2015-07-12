@@ -4,7 +4,7 @@
   Foundation.libs.tab = {
     name : 'tab',
 
-    version : '{{VERSION}}',
+    version : '5.5.2',
 
     settings : {
       active_class : 'active',
@@ -20,12 +20,16 @@
       var self = this,
           S = this.S;
 
-  	  // Store the default active tabs which will be referenced when the
-  	  // location hash is absent, as in the case of navigating the tabs and
-  	  // returning to the first viewing via the browser Back button.
-  	  S('[' + this.attr_name() + '] > .active > a', this.scope).each(function () {
-  	    self.default_tab_hashes.push(this.hash);
-  	  });
+	  // Store the default active tabs which will be referenced when the
+	  // location hash is absent, as in the case of navigating the tabs and
+	  // returning to the first viewing via the browser Back button.
+	  S('[' + this.attr_name() + '] > .active > a', this.scope).each(function () {
+	    self.default_tab_hashes.push(this.hash);
+	  });
+
+      // store the initial href, which is used to allow correct behaviour of the
+      // browser back button when deep linking is turned on.
+      self.entry_location = window.location.href;
 
       this.bindings(method, options);
       this.handle_location_hash_change();
@@ -177,9 +181,10 @@
           go_to_hash = function(hash) {
             // This function allows correct behaviour of the browser's back button when deep linking is enabled. Without it
             // the user would get continually redirected to the default hash.
-            var default_hash = settings.scroll_to_content ? self.default_tab_hashes[0] : 'fndtn-' + self.default_tab_hashes[0].replace('#', '');
+            var is_entry_location = window.location.href === self.entry_location,
+                default_hash = settings.scroll_to_content ? self.default_tab_hashes[0] : is_entry_location ? window.location.hash :'fndtn-' + self.default_tab_hashes[0].replace('#', '')
 
-            if (hash !== default_hash || window.location.hash) {
+            if (!(is_entry_location && hash === default_hash)) {
               window.location.hash = hash;
             }
           };

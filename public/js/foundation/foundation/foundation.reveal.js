@@ -4,7 +4,7 @@
   Foundation.libs.reveal = {
     name : 'reveal',
 
-    version : '{{VERSION}}',
+    version : '5.5.2',
 
     locked : false,
 
@@ -155,7 +155,7 @@
       settings = settings || this.settings;
 
 
-      if (modal.hasClass('open') && target !== undefined && target.attr('data-reveal-id') == modal.attr('id')) {
+      if (modal.hasClass('open') && target.attr('data-reveal-id') == modal.attr('id')) {
         return self.close(modal);
       }
 

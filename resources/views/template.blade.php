@@ -21,7 +21,7 @@
 	@yield('content')
 	@include('footer')
 	<script src="/js/jquery-2.1.4.min.js"></script>
-	<script src="/js/foundation/foundation.js"></script>
+	<script src="/js/foundation/foundation.min.js"></script>
 	@yield('js')
 </body>
 </html>

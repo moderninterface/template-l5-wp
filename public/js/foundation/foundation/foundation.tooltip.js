@@ -4,7 +4,7 @@
   Foundation.libs.tooltip = {
     name : 'tooltip',
 
-    version : '{{VERSION}}',
+    version : '5.5.2',
 
     settings : {
       additional_inheritable_classes : [],
@@ -13,8 +13,6 @@
       touch_close_text : 'Tap To Close',
       disable_for_touch : false,
       hover_delay : 200,
-      fade_in_duration : 150,
-      fade_out_duration : 150,
       show_on : 'all',
       tip_template : function (selector, content) {
         return '<span data-selector="' + selector + '" id="' + selector + '" class="'
@@ -309,19 +307,19 @@
 
     show : function ($target) {
       var $tip = this.getTip($target);
+
       if ($target.data('tooltip-open-event-type') == 'touch') {
         this.convert_to_touch($target);
       }
 
       this.reposition($target, $tip, $target.attr('class'));
       $target.addClass('open');
-      $tip.fadeIn(this.settings.fade_in_duration);
+      $tip.fadeIn(150);
     },
 
     hide : function ($target) {
       var $tip = this.getTip($target);
-
-      $tip.fadeOut(this.settings.fade_out_duration, function () {
+      $tip.fadeOut(150, function () {
         $tip.find('.tap-to-close').remove();
         $tip.off('click.fndtn.tooltip.tapclose MSPointerDown.fndtn.tapclose');
         $target.removeClass('open');
