@@ -7,6 +7,8 @@
 
 	@yield('meta')
 	<meta property="og:title" content="@yield('title') | Project Name Here">
+	<meta property="og:url" content="{{ Request::url() }}">
+
 	<title>@yield('title') | Project Name Here</title>
 
 	<link href="/css/app.css" rel="stylesheet">

@@ -3,10 +3,9 @@
 @section('title', 'Home')
 
 @section('meta')
-	<meta name="description" content="">
-	<meta property="og:description" content="">
-	<meta property="og:url" content="{{ Request::url() }}" />
-	<meta property="og:image" content="{{ asset('img/image.jpg') }}" />
+	<meta name="description" content="Description here.">
+	<meta property="og:description" content="Description here.">
+	<meta property="og:image" content="{{ asset('img/image.jpg') }}">
 @endsection
 
 @section('js')
