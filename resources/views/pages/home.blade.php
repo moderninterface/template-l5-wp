@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-	<div id="home">
+	<div id="page-home">
 		<div class="row">
 			<div class="large-12 columns">
 				<h1>Laravel 5 and Bootstrap Template</h1>
