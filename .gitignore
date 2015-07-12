@@ -1,3 +1,6 @@
+.DS_STORE
+._*
+/.idea
 /vendor
 /node_modules
 Homestead.yaml
