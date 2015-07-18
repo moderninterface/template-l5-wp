@@ -1,0 +1,29 @@
+/.idea
+.DS_Store
+Thumbs.db
+
+# Thanks to: https://gist.github.com/jdbartlett/444295
+
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!.htaccess
+!wp-config-default.php
+!wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins" "themes" "uploads" directories.
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/uploads/
+
+# Ignore everything in the "plugins" directory, except the plugins you specify
+#wp-content/plugins/*
+#!wp-content/plugins/my-single-file-plugin.php
+#!wp-content/plugins/add-to-any/
+#!wp-content/plugins/fv-top-level-cats/
+
+# Ignore everything in the "themes" directory, except the themes you specify
+wp-content/themes/*
+!wp-content/themes/FoundationPress-master
+
