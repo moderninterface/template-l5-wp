@@ -13,8 +13,8 @@ class PageController extends Controller {
 	{
 		Mail::send('emails.contact', [], function($message) {
 			$message->to('client-email@thewebsite.com',
-			             'another-client-email@thewebsite.com')
-			        ->subject('Contact Form Submission');
+						 'another-client-email@thewebsite.com')
+					->subject('Contact Form Submission');
 		});
 	}
 }
