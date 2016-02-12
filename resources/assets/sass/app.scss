@@ -1,16 +1,2 @@
-// For Bootstrap:
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-// For Foundation:
-@import "foundation/normalize";
-@import "foundation/settings";
-@import "foundation/foundation";
-
-// Remember:  To change Foundation defaults, first try to edit
-// foundation/foundation/_settings.scss
-// ...before trying to fight the styles in other ways!
-
-// Now our app-specific imports.
-@import "settings";
-@import "global";
-@import "pages/home";
