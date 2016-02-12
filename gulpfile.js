@@ -12,5 +12,23 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+	mix.sass(
+		[
+			'app.scss',
+		],
+		'public/css/app.css',
+		{
+			includePaths: ['assets/bower/foundation-sites/scss']
+		}
+	);
+
+	mix.scripts(
+		[
+			'vendor/modernizr.js',
+			'vendor/jquery.js',
+			'foundation.min.js'
+		],
+		'public/js/app.js',
+		'vendor/bower_components/foundation/js' // Source files base directory
+	);
 });
