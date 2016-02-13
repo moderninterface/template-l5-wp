@@ -18,17 +18,19 @@ elixir(function(mix) {
 		],
 		'public/css/app.css',
 		{
-			includePaths: ['assets/bower/foundation-sites/scss']
+			includePaths: [
+				'resources/assets/bower/foundation-sites/scss'
+			]
 		}
 	);
 
 	mix.scripts(
 		[
-			'vendor/modernizr.js',
-			'vendor/jquery.js',
-			'foundation.min.js'
+			'resources/assets/bower/jquery/jquery.js',
+			'resources/assets/bower/what-input/what-input.js',
+			'resources/assets/bower/foundation-sites/dist/foundation.js'
 		],
 		'public/js/app.js',
-		'vendor/bower_components/foundation/js' // Source files base directory
+		'vendor/bower_components/foundation/js'
 	);
 });
