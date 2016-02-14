@@ -71,6 +71,36 @@ If you ever need to update to the latest Foundation, run:
 gulp update
 ```
 
+JavaScript and CSS
+------------------
+Put all JavaScript in `resources/assets/js`.
+
+If you need to mix in another global JS file, do so by adding it to `gulpfile.js`:
+```javascript
+mix.scripts(
+	[
+		'bower/jquery/dist/jquery.js',
+		'bower/what-input/what-input.js',
+		'bower/foundation-sites/dist/foundation.js',
+		'js/global.js',
+		'js/another-global.js' // <-- Added line
+	],
+	'public/js/app.js',
+	'resources/assets'
+);
+```
+
+If you need to create some JS for a specific page, you can do so by adding another mix:
+```php
+mix.scripts(
+	[
+		'js/pages/home.js'
+	],
+	'public/js/pages/home.js',
+	'resources/assets'
+);
+```
+
 WordPress Notes
 ---------------
 To install:
