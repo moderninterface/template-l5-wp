@@ -101,6 +101,13 @@ mix.scripts(
 );
 ```
 
+You can then add the script to the page's blade like so:
+```php
+@section('js')
+	<script src="/js/pages/home.js"></script>
+@endsection
+```
+
 WordPress Notes
 ---------------
 To install:
