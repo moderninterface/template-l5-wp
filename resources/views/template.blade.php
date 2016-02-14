@@ -13,15 +13,12 @@
 
 	<link href="/css/app.css" rel="stylesheet">
 	@yield('css')
-
-	<script src="/js/modernizr.js"></script>
 </head>
 <body>
 	@include('header')
 	@yield('content')
 	@include('footer')
-	<script src="/js/jquery-2.1.4.min.js"></script>
-	<script src="/js/foundation/foundation.min.js"></script>
+	<script src="/js/app.js"></script>
 	@yield('js')
 </body>
 </html>
