@@ -73,6 +73,18 @@ gulp update
 
 WordPress Notes
 ---------------
+To install:
+```bash
+cd public/blog
+wp core download
+wp core config --dbname='<handle>' --dbuser='root' --dbpass='secret' --dbhost='localhost'
+```
+
+Only on the first deployment:
+```bash
+wp core install --url='http://<handle>.moderninterface.net' --title='<site name>' --admin_user='<user>' --admin_password='<pass>' --admin_email='<email>'
+```
+
 Put the following lines in the `wp-config.php`:
 ```php
 define('LARAVEL_ROOT', realpath('../..'));
