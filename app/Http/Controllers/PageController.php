@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller {
 
-	public function home()
+	public function getHome()
 	{
 		return view('pages.home');
 	}
 
-	public function contact(Request $request)
+	public function postContact(Request $request)
 	{
 		Mail::send('emails.contact', compact('request'), function($message) {
 			$message->to('client-email@thewebsite.com');
@@ -20,9 +20,9 @@ class PageController extends Controller {
 		});
 	}
 
-	public function newsletter(Request $request)
+	public function postNewsletter(Request $request)
 	{
-		$v = Validator::make($request, [
+		$v = Validator::make($request->all(), [
 			'email'  => 'required|email'
 		]);
 

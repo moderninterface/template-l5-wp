@@ -1,9 +1,16 @@
 #header {
-	text-align:center;
 	height:80px;
 }
 
 #footer {
-	text-align:center;
 	height:80px;
+
+	#newsletter-form {
+		#thepot {
+			display: none;
+		}
+		button {
+			margin-top:25px;
+		}
+	}
 }

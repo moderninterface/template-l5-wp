@@ -12,8 +12,6 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-	Route::get('/', [
-		'as' => 'home',
-		'uses' => 'PageController@home',
-	]);
+	Route::get('/', 'PageController@getHome');
+	Route::post('/newsletter', 'PageController@postNewsletter');
 });

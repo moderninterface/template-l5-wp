@@ -27,11 +27,12 @@ elixir(function(mix) {
 
 	mix.scripts(
 		[
-			'jquery/dist/jquery.js',
-			'what-input/what-input.js',
-			'foundation-sites/dist/foundation.js'
+			'bower/jquery/dist/jquery.js',
+			'bower/what-input/what-input.js',
+			'bower/foundation-sites/dist/foundation.js',
+			'js/global.js'
 		],
 		'public/js/app.js',
-		'resources/assets/bower'
+		'resources/assets'
 	);
 });
