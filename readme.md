@@ -35,6 +35,7 @@ nvm ls
 And enable whatever version it displayed as available with:
 ```bash
 nvm use X.X.X
+nvm alias default X.X.X
 ```
 
 Next install our packages using NVM's npm:
