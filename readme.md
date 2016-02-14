@@ -108,6 +108,8 @@ You can then add the script to the page's blade like so:
 @endsection
 ```
 
+You can also compile JS or CSS specifically to load into WordPress in a similar manner.
+
 WordPress Notes
 ---------------
 To install:
