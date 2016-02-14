@@ -51,7 +51,24 @@ cd /var/virt/<handle>
 composer install
 npm install
 bower install
-gulp
+```
+
+Those install commands only need to be ran once per deployment.
+
+You can use the normal command to compile unminified CSS and JS:
+```bash
+gulp           # Run once
+gulp watch     # Watch and run whenever SASS/JS is updated
+```
+
+Use the following command to compile minified CSS and JS for the production environment:
+```bash
+gulp --production
+```
+
+If you ever need to update to the latest Foundation, run:
+```bash
+gulp update
 ```
 
 # WordPress Notes
