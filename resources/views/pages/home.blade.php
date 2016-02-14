@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-	<div id="page-home">
+	<div id="pages-home">
 		<div class="row">
 			<div class="large-12 columns">
 				<h1>Laravel 5 and WordPress Template</h1>
