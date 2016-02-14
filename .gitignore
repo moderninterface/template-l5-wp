@@ -1,12 +1,14 @@
+# Ignore junk.
+/.idea
 .DS_STORE
 ._*
-/.idea
+Thumbs.db
 
 # Ignore Gulp compiled files.
 /public/css
 /public/js
 
-# Ignore node and front-end framework stuff.
+# Ignore node and front end framework stuff.
 /resources/assets/bower
 /node_modules
 

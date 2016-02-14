@@ -1,10 +1,12 @@
 # Front End Notes
 -----------------
+Our new workflow that is going to make our Git repositories beautiful is to ignore all compiled files and front end framework files.  We use Bower to install the framework files, and Gulp to compile our SASS and JavaScript.
+
 It's best to install node, npm, gulp, and bower using NVM.
 
 We want to be able to use all these tools globally without needing root access or anything like that.
 
-If you're on Ubuntu, totally uninstall node first with:
+If you're on Ubuntu, totally uninstall node packages and node itself first with:
 ```bash
 sudo npm -g ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print $1}' | sudo xargs npm -g rm
 sudo apt-get purge nodejs
@@ -39,6 +41,17 @@ Next install our packages using NVM's npm:
 ```bash
 npm install -g bower
 npm install -g gulp
+```
+
+# Front End Workflow
+--------------------
+After cloning the repository:
+```bash
+cd /var/virt/<handle>
+composer install
+npm install
+bower install
+gulp
 ```
 
 # WordPress Notes
