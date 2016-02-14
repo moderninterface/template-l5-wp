@@ -19,7 +19,8 @@ elixir(function(mix) {
 		'public/css/app.css',
 		{
 			includePaths: [
-				'resources/assets/bower/foundation-sites/scss'
+				'resources/assets/bower/foundation-sites/scss',
+				'resources/assets/bower/motion-ui/src'
 			]
 		}
 	);

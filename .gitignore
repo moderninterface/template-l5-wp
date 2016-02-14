@@ -1,6 +1,11 @@
 .DS_STORE
 ._*
 /.idea
+
+# Ignore Gulp compiled files.
+/public/css
+/public/js
+
 /vendor
 /node_modules
 /public/storage
