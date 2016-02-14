@@ -26,11 +26,11 @@ elixir(function(mix) {
 
 	mix.scripts(
 		[
-			'resources/assets/bower/jquery/jquery.js',
-			'resources/assets/bower/what-input/what-input.js',
-			'resources/assets/bower/foundation-sites/dist/foundation.js'
+			'jquery/dist/jquery.js',
+			'what-input/what-input.js',
+			'foundation-sites/dist/foundation.js'
 		],
 		'public/js/app.js',
-		'vendor/bower_components/foundation/js'
+		'resources/assets/bower'
 	);
 });
