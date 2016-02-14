@@ -1,5 +1,5 @@
-# Front End Notes
------------------
+Front End Node Notes
+--------------------
 Our new workflow that is going to make our Git repositories beautiful is to ignore all compiled files and front end framework files.  We use Bower to install the framework files, and Gulp to compile our SASS and JavaScript.
 
 It's best to install node, npm, gulp, and bower using NVM.
@@ -43,8 +43,8 @@ npm install -g bower
 npm install -g gulp
 ```
 
-# Front End Workflow
---------------------
+Front End Workflow Notes
+------------------------
 After cloning the repository:
 ```bash
 cd /var/virt/<handle>
@@ -71,8 +71,8 @@ If you ever need to update to the latest Foundation, run:
 gulp update
 ```
 
-# WordPress Notes
-------------------
+WordPress Notes
+---------------
 Put the following lines in the `wp-config.php`:
 ```php
 define('LARAVEL_ROOT', realpath('../..'));
