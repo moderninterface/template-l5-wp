@@ -6,8 +6,11 @@
 /public/css
 /public/js
 
-/vendor
+# Ignore node and front-end framework stuff.
+/resources/assets/bower
 /node_modules
+
+/vendor
 /public/storage
 Homestead.yaml
 Homestead.json
