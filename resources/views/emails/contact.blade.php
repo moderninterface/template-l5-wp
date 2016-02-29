@@ -3,7 +3,7 @@
 <table>
 	<tr>
 		<td>Name</td>
-		<td>{{ $request->name }}
+		<td>{{ $request->theName }}
 	</tr>
 	<tr>
 		<td>Email</td>

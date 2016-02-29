@@ -14,7 +14,7 @@ sudo apt-get purge nodejs
 
 Make sure you delete /usr/bin/node if that was an `ln` that you created to nodejs as well.  (But don't just blindly delete this if you don't know what it is.)
 
-Next, install NVM by executing the wget command from the "Install script" section here:
+Next, install NVM by executing the wget command from the "Install script" section here (Linux and Mac OS):
 https://github.com/creationix/nvm
 
 Source so nvm works:
@@ -59,7 +59,7 @@ Those install commands only need to be ran once per deployment.
 You can use the normal command to compile unminified CSS and JS:
 ```bash
 gulp           # Run once
-gulp watch     # Watch and run whenever SASS/JS is updated
+gulp watch     # Watch and run whenever SASS/JS is updated, or setup automatically in IDE
 ```
 
 Use the following command to compile minified CSS and JS for the production environment:
@@ -91,7 +91,11 @@ mix.scripts(
 );
 ```
 
-If you need to create some JS for a specific page, you can do so by adding another mix:
+Note that this build includes ALL foundation plugins. To keep things smaller...
+"If you're only using certain plugins, know that they all require foundation.core.js and foundation.util.mediaQuery.js to be loaded first. Some plugins also require specific utility libraries that ship with Foundation—refer to a plugin's documentation to find out which plugins require what, and see the JavaScript Utilities page for more information."
+(We'll need more documentation on how exactly to do this with gulp)
+
+If you need to create some JS for a specific page, you can do so by adding another mix (but may be cleaner to keep in global.js and use comments):
 ```php
 mix.scripts(
 	[
@@ -130,6 +134,7 @@ Put the following lines in the `wp-config.php`:
 define('LARAVEL_ROOT', realpath('../..'));
 define('WP_HOME','http://<handle>.app/blog');
 define('WP_SITEURL','http://<handle>.app/blog');
+define( 'DISALLOW_FILE_EDIT', true );
 ```
 
 Use the following commands to retrieve the header/footer:

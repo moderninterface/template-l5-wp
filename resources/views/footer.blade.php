@@ -3,7 +3,7 @@
 		<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
 		{{-- Honey pot to trick the bots --}}
-		<input type="text" id="thepot" name="thename" placeholder="Name" />
+		<input type="text" id="thepot" name="age" placeholder="Age" class="hide"/>
 
 		{{-- Errors / Success --}}
 		<div class="row">

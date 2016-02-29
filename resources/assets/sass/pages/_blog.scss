@@ -1,0 +1,72 @@
+#pages-blog {
+	background:red;
+
+	#sidebar {
+		ul {
+			list-style: none;
+			font-size: 1rem;
+		}
+	}
+
+	//from FoundationPress for Wordpress:
+
+	//Featured images:
+	@media #{$small-up} {
+		#featured-hero {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			margin: - rem-calc(32) 0 rem-calc(32);
+			position: relative;
+			height: rem-calc(200);
+		}
+
+		.no-featured-image-set {
+			height: rem-calc(16) !important;
+		}
+	}
+
+	@media #{$medium-up} {
+		#featured-hero {
+			height: rem-calc(400);
+		}
+	}
+
+
+	// Add the alignment classes used by the WordPress media library
+
+	.alignleft {
+		float: left;
+	}
+
+	.alignright {
+		float: right;
+	}
+
+	.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.full-width {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: initial;
+	}
+
+	blockquote.alignleft,
+	img.alignleft {
+		margin: rem-calc(7) rem-calc(24) rem-calc(7) 0;
+	}
+
+	.wp-caption.alignleft {
+		margin: rem-calc(7) rem-calc(14) rem-calc(7) 0;
+	}
+
+	blockquote.alignright,
+	img.alignright {
+		margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
+	}
+}
